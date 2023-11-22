@@ -1,0 +1,49 @@
+de Instalación crasaragon
+Creamos el directorio donde esta la app
+
+Creamos el ambiente
+virtualenv crasaragon
+
+Instalamos flask y sus extensiones introduciendo los siguientes comandos:
+crasaragon/bin/pip install Flask==0.10.1
+crasaragon/bin/pip install Jinja2==2.7.3
+crasaragon/bin/pip install psycopg2
+
+
+
+//Estos no hacen falta
+crasaragon/bin/pip install MarkupSafe==0.23
+crasaragon/bin/pip install Werkzeug==0.9.6
+crasaragon/bin/pip install argparse==1.2.1
+crasaragon/bin/pip install itsdangerous==0.24
+crasaragon/bin/pip install requests==2.4.1
+crasaragon/bin/pip install wsgiref==0.1.2
+crasaragon/bin/pip install gunicorn==19.1.1
+crasaragon/bin/pip install flask-sqlalchemy
+crasaragon/bin/pip install sqlalchemy-migrate
+crasaragon/bin/pip install flask-whooshalchemy
+
+
+
+
+
+//La de base de datos, a ver si podemos usarlo con sqlite o si no poner
+crasaragon/bin/pip install Flask-MySQL==1.2
+crasaragon/bin/pip install MySQL-python==1.2.5
+
+
+Creamos los directorios de la aplicacion
+mkdir app
+mkdir app/static
+mkdir app/templates
+mkdir tmp
+
+
+//Creo la base de datos
+//Creo el usuario
+CREATE USER 'crash'@'localhost' IDENTIFIED BY 'crash';
+GRANT ALL PRIVILEGES ON Datos.* TO 'crash'@'localhost';
+
+
+
+
